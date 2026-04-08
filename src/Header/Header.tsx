@@ -1,4 +1,4 @@
-// import React from 'react'
+import React from 'react'
 import icon from './images/icon.png'
 import { FaGithub} from "react-icons/fa";
 import { MdOutlineNightlight } from "react-icons/md";
@@ -7,6 +7,7 @@ import { FaAngleDown } from "react-icons/fa";
 
 
 function Header() {
+
   return (
     <header className="flex justify-between bg-[#23262f] py-2 px-6 ">
       <div className="flex gap-6 items-center">

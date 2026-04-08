@@ -1,6 +1,7 @@
 // import React from 'react'
 import { MdEmail } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
+import { Navigate } from "react-router-dom";
 
 function Signup() {
   return (
@@ -17,10 +18,11 @@ function Signup() {
             Sign Up
           </button>
           <button
+          onClick={()=><Navigate to='singIn'/>}
             type="button"
             className="bg-[#17181c] text-white h-10 w-24 text-center rounded-4xl"
           >
-            Sign In
+            Login
           </button>
         </div>
 
