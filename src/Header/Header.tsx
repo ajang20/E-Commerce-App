@@ -34,9 +34,9 @@ function Header() {
          <div className='icons flex gap-5 text-2xl'>
          <CiHeart/>
          <CiShoppingCart/>
-         <button type="button" className='flex justify-center items-center text-black gap-1'>
-          <CiLight/>t
-         </button>
+         <div  className='flex justify-center items-center text-black gap-1'>
+          <CiLight/>
+         </div>
          </div>
         <span className='border h-6 text-[#b3c7ff]'></span>
          <CiUser className="text-2xl"/>

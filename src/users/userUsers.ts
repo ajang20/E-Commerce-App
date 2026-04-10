@@ -12,7 +12,7 @@ export type User = {
 
 type Result = {
   users:User[],
-  error: Error | null,
+  error:Error | null,
   loading: boolean
 }
 
