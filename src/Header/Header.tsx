@@ -11,9 +11,9 @@ import { CiLight } from "react-icons/ci";
 
 
 function Header() {
-  const inputRef = React.useRef()
-  function focus(e){
-    inputRef.current.focus()
+  const inputRef = React.useRef<HTMLInputElement>(null)
+  function focus(e:React.MouseEvent<HTMLButtonElement>){
+    inputRef.current?.focus()
   }
 
 
@@ -37,7 +37,7 @@ function Header() {
          <CiHeart/>
          <CiShoppingCart/>
          <button type="button" className='flex justify-center items-center text-black gap-1'>
-          <CiLight/>
+          <CiLight/>t
          </button>
          </div>
         <span className='border h-6 text-[#b3c7ff]'></span>
