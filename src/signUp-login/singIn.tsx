@@ -2,7 +2,7 @@
 import { MdEmail } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
 import { FaRegUser } from "react-icons/fa";
-import icon from './image.png'
+// import icon from './image.png'
 import { Navigate } from "react-router-dom";
 
 function SignIn() {
@@ -15,8 +15,8 @@ function SignIn() {
   return (
     <div className="bg-[#17181c] h-screen flex flex-col  ">
       <div className="flex gap-6 items-center mx-10 my-6">
-        <img src={icon} alt="icon" className='w-12.5 h-12.5'/>
-        <div className="text-3xl font-bold text-[#b3c7ff]">Platzi Fake Store API</div>
+  
+        <div className="text-3xl font-bold text-[#b3c7ff]">Cyber</div>
       </div>
 
       <form
