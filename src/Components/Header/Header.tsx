@@ -21,7 +21,7 @@ function Header() {
         <div className="text-3xl font-bold text-black">Cyber</div>
         <div className=" flex items-center justify-center border h-10 w-85 rounded-md text-black px-2 bg-[#DFDFDF] hover:border-black border-[#DFDFDF]">
           <IoIosSearch/>
-          <input ref={inputRef} type="text" placeholder='Search' className='text-white w-[80%] ml-1.5  border-0 outline-0'/>
+          <input ref={inputRef} type="text" placeholder='Search' className='text-black w-[80%] ml-1.5  border-0 outline-0'/>
           <button onClick={focus} type='button' className='text-[12px] px-1.5 border-[#23262f] border bg-[#23262f] rounded-sm text-white'>Ctrl k</button></div>
       </div>
 

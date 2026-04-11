@@ -1,18 +1,20 @@
 // import React from 'react'
-import Header from './Header/Header'
-import Body from './Body/BodySection'
-import useUsers from './users/userUsers'
+import Header from "./Components/Header/Header";
+import Body from "./Body/BodySection";
+import useUsers from "./Components/users/userUsers";
+import Footer from "./Components/Header/Footer";
 
 export default function App() {
-  const {users,error,loading} = useUsers()
-  console.log(users)
-  console.log(error)
-  console.log(loading)
-  
+  const { users, error, loading } = useUsers();
+  console.log(users);
+  console.log(error);
+  console.log(loading);
+
   return (
     <div>
-      <Header/>
-      <Body/>
+      <Header />
+      <Body />
+      <Footer/>
     </div>
-  )
+  );
 }
