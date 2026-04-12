@@ -15,17 +15,18 @@ type ChildrenType = {
 };
 
 export default function UsersContextProvider({ children }: ChildrenType) {
-  const [currentUser, setCurrentUser] = useState<User | null>(
-    JSON.parse(localStorage.getItem("user") as string) || null,
-  );
+  const [currentUser, setCurrentUser] = useState< User | null>(null);
 
-  function login(userData: User) {
+  function login(userData:User) {
+
     localStorage.setItem("user", JSON.stringify(userData));
     setCurrentUser(userData);
   }
   function logout() {
+    console.log(currentUser)
     localStorage.removeItem("user");
     setCurrentUser(null);
+    console.log(currentUser)
   }
 
   return (

@@ -1,11 +1,14 @@
 import React from "react";
-
+import { useNavigate } from "react-router-dom";
 import { CiShoppingCart } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
 import { NavLink } from 'react-router-dom';
 import { IoIosSearch } from "react-icons/io";
-import { CiUser } from "react-icons/ci";
+// import { CiUser } from "react-icons/ci";
 import { CiLight } from "react-icons/ci";
+import { IoIosLogOut } from "react-icons/io";
+import { useAuth } from "../Protected&Context/UsersContextProvider";
+
 
 
 function Header() {
@@ -13,12 +16,21 @@ function Header() {
   function focus(){
     inputRef.current?.focus()
   }
+ 
+  const navigate = useNavigate()
 
+ const context = useAuth()
 
+ function logOut(){
+  context?.logout()
+  navigate('/login',{replace:true}
+  )
+ }
+console.log('importedContext',context)
   return (
     <header className="flex justify-around gap-6 bg-white py-2 px-6 h-20 ">
       <div className="flex gap-6 items-center">
-        <div className="text-3xl font-bold text-black">Cyber</div>
+        <div className="text-3xl font-bold text-black">Shop-now!</div>
         <div className=" flex items-center justify-center border h-10 w-85 rounded-md text-black px-2 bg-[#DFDFDF] hover:border-black border-[#DFDFDF]">
           <IoIosSearch/>
           <input ref={inputRef} type="text" placeholder='Search' className='text-black w-[80%] ml-1.5  border-0 outline-0'/>
@@ -39,7 +51,7 @@ function Header() {
          </div>
          </div>
         <span className='border h-6 text-[#b3c7ff]'></span>
-         <CiUser className="text-2xl"/>
+         <div onClick={logOut}><IoIosLogOut className="text-2xl"/></div>
       </div>
     </header >
   )

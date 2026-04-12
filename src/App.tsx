@@ -1,20 +1,40 @@
 // import React from 'react'
-import Header from "./Components/Header/Header";
-import Body from "./Body/BodySection";
-import useUsers from "./Components/users/userUsers";
-import Footer from "./Components/Header/Footer";
+// import Body from "./Body/BodySection";
+// import useUsers from "./Components/users/userUsers";
+import { useLoaderData } from "react-router-dom";
+// import Products from "./Products/Products";
+import Categories from "./Products/categories";
+
+export type Product = {
+  id: number;
+  title: string;
+  slug: string;
+  price: number;
+  description: string;
+  category: Category;
+  images: string[];
+  creationAt: string;
+  updatedAt: string;
+};
+export type Category = {
+  id: number;
+  name: string;
+  slug: string;
+  image: string;
+  creationAt: string,
+  updatedAt: string
+};
 
 export default function App() {
-  const { users, error, loading } = useUsers();
-  console.log(users);
-  console.log(error);
-  console.log(loading);
+  const { products } = useLoaderData() as {categories:Category[], products:Product[]};
 
   return (
     <div>
-      <Header />
-      <Body />
-      <Footer/>
+      {/* <Body/> */}
+        <Categories />
+      {/* <Products products={products} /> */}
     </div>
   );
 }
+
+
