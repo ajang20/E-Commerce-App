@@ -1,11 +1,10 @@
 
-import { useParams,useLocation } from "react-router-dom"
+import { useLocation } from "react-router-dom"
 
 function ProductDetails() {
-    const {id} = useParams()
+    // const {id} = useParams()
     const location = useLocation().state
-    console.log(id)
-    console.log(location.state)
+
   return (
     <div className="flex flex-col m-20 gap-8 px-30">
         <img src={location.images[0]} alt={location.slug} className="h-[60vh] w-130"/>
