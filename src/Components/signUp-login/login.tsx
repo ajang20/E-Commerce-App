@@ -73,7 +73,7 @@ export default function SignIn() {
   return (
     <div className="bg-[#17181c] h-screen flex flex-col  ">
       <div className="flex gap-6 items-center mx-10 my-6">
-        <div className="text-3xl font-bold text-[#b3c7ff]">Cyber</div>
+        <div className="text-3xl font-bold text-[#b3c7ff]">Shop-now!</div>
       </div>
 
       <form

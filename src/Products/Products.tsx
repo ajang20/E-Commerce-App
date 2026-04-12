@@ -10,7 +10,7 @@ function Products() {
    const filterProducts = products.filter( (product:Product) => product.category.name === name || product.category.id === category.id)
 
   const productsElements = filterProducts.map( (product:Product) => product?
-                                         <Link to={`/categories/${product.category.name}/${product.id}`} state={product}>
+                                         <Link to={`${product.id}`} state={product}>
                                          <div key={product.id} 
                                                      className="flex flex-col gap-2 items-center  hover:shadow-gray-500 hover:shadow-2xl p-4 rounded-2xl border-0">
                                                       <img src={product.images[0]} alt={product.slug} className="h-70 w-68"/>

@@ -28,7 +28,8 @@ function Header() {
  }
 console.log('importedContext',context)
   return (
-    <header className="flex justify-around gap-6 bg-white py-2 px-6 h-20 ">
+    <div className="sticky top-0 z-50 w-full">
+      <header className="flex justify-around gap-6 bg-white py-2 px-6 h-20 shadow-2xl shadow-gray-200 ">
       <div className="flex gap-6 items-center">
         <div className="text-3xl font-bold text-black">Shop-now!</div>
         <div className=" flex items-center justify-center border h-10 w-85 rounded-md text-black px-2 bg-[#DFDFDF] hover:border-black border-[#DFDFDF]">
@@ -54,6 +55,7 @@ console.log('importedContext',context)
          <div onClick={logOut}><IoIosLogOut className="text-2xl"/></div>
       </div>
     </header >
+    </div>
   )
 }
 export default Header
