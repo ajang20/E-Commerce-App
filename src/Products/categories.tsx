@@ -37,7 +37,7 @@ function Categories() {
       const categoryElements = categories.map( category => category?
                                          <Link to={`/categories/${category.name}`} state={{category,products}}>
                                          <div key={category.name} 
-                                                     className="flex flex-col gap-2 items-center shadow-gray-400 shadow-2xl hover:shadow-gray-700 hover:shadow-2xl p-4 rounded-2xl border-0 ">
+                                                     className="flex flex-col gap-2 items-center shadow-gray-400 shadow-2xl hover:shadow-black hover:shadow-2xl p-4 rounded-2xl border-0 ">
                                                       <img src={category.image} alt={category.name} className="h-70 w-68 text-wrap"/>
                                                       <span className="">{category.name}</span>
                                                       <button type='button' className="bg-black text-white w-26 p-1.5 rounded">More...</button>
