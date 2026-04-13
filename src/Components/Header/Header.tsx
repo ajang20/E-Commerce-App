@@ -8,6 +8,7 @@ import { IoIosSearch } from "react-icons/io";
 import { CiLight } from "react-icons/ci";
 import { IoIosLogOut } from "react-icons/io";
 import { useAuth } from "../Protected&Context/UsersContextProvider";
+import { MdDarkMode } from "react-icons/md";
 
 
 
@@ -18,8 +19,12 @@ function Header() {
   }
  
   const navigate = useNavigate()
-
- const context = useAuth()
+  const context = useAuth()
+  const [themeToggle, setThemeToggle] = React.useState<string>('light')
+  console.log(themeToggle)
+ function toggle(){
+ setThemeToggle('darkblue')
+ }
 
  function logOut(){
   context?.logout()
@@ -47,8 +52,8 @@ console.log('importedContext',context)
          <div className='icons flex gap-5 text-2xl'>
          <CiHeart/>
          <CiShoppingCart/>
-         <div  className='flex justify-center items-center text-black gap-1'>
-          <CiLight/>
+         <div  className='flex justify-center items-center text-black gap-1 hover:shadow hover:shadow-black' onClick={toggle}>
+          {themeToggle==='light'?< CiLight />:<MdDarkMode/>}
          </div>
          </div>
         <span className='border h-6 text-[#b3c7ff]'></span>
