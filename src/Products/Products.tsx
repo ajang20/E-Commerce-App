@@ -12,7 +12,7 @@ function Products() {
   const productsElements = filterProducts.map( (product:Product) => product?
                                          <Link to={`${product.id}`} state={product}>
                                          <div key={product.id} 
-                                                     className="flex flex-col gap-2 items-center  hover:shadow-gray-500 hover:shadow-2xl p-4 rounded-2xl border-0">
+                                                     className="flex flex-col gap-2 items-center shadow-gray-400 shadow-2xl hover:shadow-black hover:shadow-2xl p-4 rounded-2xl border-0">
                                                       <img src={product.images[0]} alt={product.slug} className="h-70 w-68"/>
                                                       <span className="">{product.title}</span>
                                                       <span className="text-xl font-bold">${product.price}</span>
