@@ -6,12 +6,14 @@ function ProductDetails() {
     const location = useLocation().state
 
   return (
-    <div className="flex flex-col m-20 gap-8 px-30">
+    <div className="flex  m-20 gap-8 justify-between px-40">
         <img src={location.images[0]} alt={location.slug} className="h-[60vh] w-130"/>
+        <div className="flex flex-col gap-10">
         <span className="text-4xl font-bold">{location.title}</span>
         <span className="text-3xl font-bold">${location.price}</span>
         <span className="text-xl">{location.description}</span>
         <button type='button' className="bg-black text-white w-62 p-6 rounded text-2xl">Buy Now</button>
+        </div>
 
     </div>
   )

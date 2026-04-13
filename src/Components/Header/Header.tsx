@@ -25,6 +25,10 @@ function Header() {
  function toggle(){
  setThemeToggle('darkblue')
  }
+function scrollToFooter(){
+  //haven't yet applied it:
+  inputRef.current?.scrollIntoView({behavior:'smooth'})
+}
 
  function logOut(){
   context?.logout()
@@ -45,7 +49,7 @@ console.log('importedContext',context)
 
       <nav className='flex gap-10 items-center '>
     <NavLink  to='/'>Home</NavLink>
-    <NavLink to=''>About</NavLink>
+    <NavLink to='' onClick={()=>scrollToFooter()}>About</NavLink>
     <NavLink to=''>Contact Us</NavLink>
       </nav>
       <div className='flex gap-4 justify-center items-center  p-1'>
