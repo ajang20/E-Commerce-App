@@ -4,7 +4,6 @@ import { CiShoppingCart } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
 import { NavLink } from 'react-router-dom';
 import { IoIosSearch } from "react-icons/io";
-// import { CiUser } from "react-icons/ci";
 import { CiLight } from "react-icons/ci";
 import { IoIosLogOut } from "react-icons/io";
 import { useAuth } from "../Protected&Context/UsersContextProvider";
