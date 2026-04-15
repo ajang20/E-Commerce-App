@@ -9,6 +9,12 @@ import { CiLight } from "react-icons/ci";
 import { IoIosLogOut } from "react-icons/io";
 import { useAuth } from "../Protected&Context/UsersContextProvider";
 import { MdDarkMode } from "react-icons/md";
+import { consumecontext } from "./ContextProvider";
+
+
+
+
+
 
 
 
@@ -17,14 +23,12 @@ function Header() {
   function focus(){
     inputRef.current?.focus()
   }
- 
+  
   const navigate = useNavigate()
   const context = useAuth()
-  const [themeToggle, setThemeToggle] = React.useState<string>('light')
-  console.log(themeToggle)
- function toggle(){
- setThemeToggle('darkblue')
- }
+  const {theme,toggleTheme} = consumecontext()
+  
+  const result = theme ==='light'?'bg-[#23262f] text-white':'bg-white text-black'
 function scrollToFooter(){
   //haven't yet applied it:
   inputRef.current?.scrollIntoView({behavior:'smooth'})
@@ -37,7 +41,7 @@ function scrollToFooter(){
  }
 console.log('importedContext',context)
   return (
-    <div className="sticky top-0 z-50 w-full">
+    <div className={`sticky top-0 z-50 w-full ${result}`}>
       <header className="flex justify-around gap-6 bg-white py-2 px-6 h-20 shadow-2xl shadow-gray-200 ">
       <div className="flex gap-6 items-center">
         <div className="text-3xl font-bold text-black">Shop-now!</div>
@@ -56,8 +60,8 @@ console.log('importedContext',context)
          <div className='icons flex gap-5 text-2xl'>
          <CiHeart/>
          <CiShoppingCart/>
-         <div  className='flex justify-center items-center text-black gap-1 hover:shadow hover:shadow-black' onClick={toggle}>
-          {themeToggle==='light'?< CiLight />:<MdDarkMode/>}
+         <div  className='flex justify-center items-center text-black gap-1' onClick={toggleTheme}>
+          {theme==='light'?<MdDarkMode/>:< CiLight />}
          </div>
          </div>
         <span className='border h-6 text-[#b3c7ff]'></span>
