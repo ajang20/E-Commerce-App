@@ -40,7 +40,7 @@ function scrollToFooter(){
  }
 console.log('importedContext',context)
   return (
-    <div className={`sticky top-0 z-50 w-full`}>
+    <div className='sticky top-0 z-50 w-full'>
       <header className="flex justify-around gap-6 bg-white py-2 px-6 h-20 shadow-2xl shadow-gray-200 ">
       <div className="flex gap-6 items-center">
         <div className="text-3xl font-bold text-black">Shop-now!</div>
