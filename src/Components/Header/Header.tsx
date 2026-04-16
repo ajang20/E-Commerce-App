@@ -27,7 +27,7 @@ function Header() {
   const context = useAuth()
   const {theme,toggleTheme} = consumecontext()
   
-  const result = theme ==='light'?'bg-[#23262f] text-white':'bg-white text-black'// not yet fully working
+  // const result = theme ==='light'?'bg-[#23262f] text-white':'bg-white text-black'// not yet fully working
 function scrollToFooter(){
   //haven't yet applied it:
   inputRef.current?.scrollIntoView({behavior:'smooth'})
